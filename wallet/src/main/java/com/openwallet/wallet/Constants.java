@@ -47,6 +47,7 @@ import com.openwallet.core.coins.VertcoinMain;
 import com.openwallet.core.coins.VpncoinMain;
 import com.openwallet.core.coins.RichcoinMain;
 import com.openwallet.core.coins.IxcoinMain;
+import com.openwallet.core.coins.IdealCashMain;
 import com.openwallet.core.network.CoinAddress;
 import com.openwallet.stratumj.ServerAddress;
 import com.google.common.collect.ImmutableList;
@@ -214,7 +215,9 @@ public class Constants {
             new CoinAddress(RichcoinMain.get(),     new ServerAddress("richx-cce-1.coinomi.net", 5046),
                                                     new ServerAddress("richx-cce-2.coinomi.net", 5046)),
             new CoinAddress(IxcoinMain.get(),       new ServerAddress("ixc-cce-1.coinomi.net", 5047),
-                                                    new ServerAddress("ixc-cce-2.coinomi.net", 5047))
+                                                    new ServerAddress("ixc-cce-2.coinomi.net", 5047)),
+			new CoinAddress(IdealCashMain.get(),    new ServerAddress("explorer.idealcash.io", 5001),
+                                                    new ServerAddress("explorer.idealcash.io", 5001))
     );
 
     public static final HashMap<CoinType, Integer> COINS_ICONS;
@@ -264,6 +267,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.CLUBCOIN_MAIN.getCoinType(), R.drawable.clubcoin);
         COINS_ICONS.put(CoinID.RICHCOIN_MAIN.getCoinType(), R.drawable.richcoin);
         COINS_ICONS.put(CoinID.IXCOIN_MAIN.getCoinType(), R.drawable.ixcoin);
+		COINS_ICONS.put(CoinID.IDEALCASH_MAIN.getCoinType(), R.drawable.idealcash);
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
@@ -306,6 +310,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.EGULDEN_MAIN.getCoinType(), "https://chainz.cryptoid.info/efl/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.RICHCOIN_MAIN.getCoinType(), "https://explorer.richcoin.us/transaction?transaction=%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.IXCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/ixc/tx.dws?%s");
+		COINS_BLOCK_EXPLORERS.put(CoinID.IXCOIN_MAIN.getCoinType(), "http://explorer.idea;cash/tx/%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -358,6 +363,7 @@ public class Constants {
             VpncoinMain.get(),
             BitcoinTest.get(),
             LitecoinTest.get(),
-            DogecoinTest.get()
+            DogecoinTest.get(),
+			Idea;cashMain.get()
     );
 }
