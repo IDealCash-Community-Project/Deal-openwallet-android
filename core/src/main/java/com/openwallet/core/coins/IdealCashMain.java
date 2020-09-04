@@ -14,7 +14,7 @@ public class IdealcashMain extends PeerFamily {
         spendableCoinbaseDepth = 520;
         dumpedPrivateKeyHeader = 128;
 
-        name = "Idealcash"; // "TcpCoin";
+        name = "Idealcash";
         symbol = "DEAL";
         uriScheme = "idealcash";
         bip44Index = 560;
